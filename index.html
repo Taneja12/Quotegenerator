@@ -18,12 +18,12 @@
 <body>
     <div class="container text-center mt-2">
         <h1>Quotes Generator</h1>
-        <!-- <button type="button" class="btn btn-primary mt-2" onclick="func()" >Generate</button> -->
+        <button type="button" class="btn btn-primary mt-2" onclick="func()" >Generate</button>
         <div id="result">
         </div>
     </div>
     <script>
-        setInterval(func, 6000);
+        // setInterval(func, 6000);
         function func(){
             var url='https://type.fit/api/quotes'
             var my_result = document.getElementById('result')
@@ -34,10 +34,12 @@
             function func1(dta)
             {
                 let random = Math.random();
-                //console.log("Random Number Generated : " + Math.floor(random * 1000));
+                // console.log("Random Number Generated : " + Math.floor(random * 1000));
                 var random1 = Math.floor(random * 10)
-                my_result.innerHTML = '<h2>' + "❝ " + dta[random1]['text'] + " ❞"+ '</h2>' + '<br>' + '<h3>' +"-" + dta[random1]['author'] + '</h3>'
-                my_result.className = 'alert alert-primary mt-2'
+                console.log(random1)
+                console.log(dta[random1])
+                my_result.innerHTML = '<h2>' + "❝ " + dta[random1]['text'] + " ❞"+ '</h2>' + '<br>' + '<h3>' +"-" + dta[random1]['author']  + '</h3>'
+                my_result.className = 'alert alert-primary mt-2'    
 
             }
 
